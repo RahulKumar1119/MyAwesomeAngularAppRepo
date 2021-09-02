@@ -1,0 +1,17 @@
+eksctl create nodegroup --cluster=eksdemo1 \
+                        --region=ap-south-1 \
+                        --name=eksdemo1-ng-private1 \
+                        --node-type=t3.small \
+                        --nodes-min=2 \
+                        --nodes-max=3 \
+			--spot \
+                        --node-volume-size=10 \
+                        --ssh-access \
+                        --ssh-public-key=rahul \
+                        --managed \
+                        --asg-access \
+                        --external-dns-access \
+                        --full-ecr-access \
+                        --appmesh-access \
+                        --alb-ingress-access \
+                        --node-private-networking  
